@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>.</title>
+	<style>
+		* {
+			font-family: "Arial", Georgia, serif, Times;
+			font-size: 10px;
+		}
+
+		th.Title {
+			background: #c5c5c5;
+			height: 16px;
+			border: 1.5px solid;
+		}
+
+		th.Title:first-child {
+			border-top-left-radius: 5px;
+		}
+
+		th.Title:last-child {
+			border-top-right-radius: 5px;
+		}
+
+		td {
+			vertical-align: middle; 
+			height: 14px;
+		}
+
+		.center {
+			text-align: center;
+			vertical-align: middle;
+			border: none;
+		}
+
+		.derecha {
+			text-align: right;
+		}
+
+		.Borde-T {
+			border: 1px solid #808080;
+		}
+
+		.SinBorde {
+			border: none;
+		}
+
+	</style>
+</head>
+<body>
+<table style="width:100%">
+	<tr>
+		<th width="25%" colspan="2" rowspan="6">%IMAGEN_LOGO%</th>
+		<th width="75%" colspan="6"><br>%EMISOR_NOMBRE%<br></th>
+	</tr>
+	<tr>
+		<th width="75%" colspan="6">%EMISOR_RFC%</th>
+	</tr>
+	<tr>
+		<th width="75%" colspan="6">%EMISOR_DOMICILIO% %EMISOR_COLONIA%, %EMISOR_LOCALIDAD% %EMISOR_CP% <br> %EMISOR_MUNICIPIO% %EMISOR_ESTADO% </th>
+	</tr>
+	<tr>
+		<th width="75%" colspan="6"></th><!--TELEFONOS-->
+	</tr>
+	<tr>
+		<th width="37.5%" colspan="3">EFECTOS FISCALES AL PAGO</th>
+		<th width="37.5%" colspan="3">PAGO EN UNA SOLA EXHIBICION</th>
+	</tr>
+
+</table>
+
+<br>
+
+<table border="1" style="width:100%">
+	
+	<tr>
+		<th class="Title" colspan="6" width="75%">DATOS DEL CLIENTE</th>
+		<th class="Title" colspan="2" width="25%">COMPROBANTE FISCAL DIGITAL</th>
+	</tr>
+
+	<tr>
+		<td class="SinBorde" width="10%"><strong>NOMBRE:</strong></td>
+		<td class="SinBorde" width="50%" colspan="5">%RECEPTOR_NOMBRE%</td>
+		<td width="25%" class="center" style="border-left: 1px solid #808080;" colspan="2" rowspan="4">
+			<strong>%INVOICE_FOLIO%</strong> <br><br>
+			<strong>NO. CERTIFICADO:</strong> <br>
+			%SERIE_CERT%
+		</td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="10%"><strong>DOMICILIO:</strong></td>
+		<td class="SinBorde" width="50%" colspan="5">%RECEPTOR_DOMICILIO%</td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="10%"><strong>R.F.C.:</strong></td>
+		<td class="SinBorde" width="20%" colspan="2">%RECEPTOR_RFC%</td>
+		<td class="SinBorde" width="10%"><strong>TEL.:</strong></td>
+		<td class="SinBorde" colspan="2">%\//Compac/Encabezado/MGW10008/DirCteFis|cTelefono1\%</td>
+	</tr>
+
+</table>
+
+<br>
+
+<table border="1" style="width:100%">
+
+	<tr>
+		<th class="Title" colspan="8">LUGAR DE EXPEDICION</th>
+	</tr>
+	<tr>
+		<td class="SinBorde center" colspan="8">%INVOICE_LUGAR_EXPEDICION%</td>
+	</tr>
+</table>
+
+<br>
+
+<table border="1" style="width:100%">
+
+	<tr>
+		<th class="Title" colspan="2" width="25%">FECHA Y HORA</th>
+		<th class="Title" colspan="2" width="25%">VENCIMIENTO</th>
+		<th class="Title" colspan="2" width="25%">VENDEDOR</th>
+		<th class="Title" colspan="2" width="25%">CONDICIONES</th>
+	</tr>
+	<tr>
+		<td width="25%" colspan="2">%INVOICE_DATE%</td>
+		<td width="25%" colspan="2">%\//Compac/Encabezado/MGW10008|cFechaVencimiento\%</td>
+		<td width="25%" colspan="2"></td>
+		<td width="25%" colspan="2"></td>
+	</tr>
+</table>
+
+<br>
+
+<table border="1" style="width:100%">
+
+	<tr>
+		<th width="13%" class="Title">CANTIDAD</th>
+		<th width="13%" class="Title">UNIDAD</th>
+		<th width="44%" class="Title" colspan="4">DESCRIPCION</th>
+		<th width="15%" class="Title">P.UNITARIO</th>
+		<th width="15%" class="Title">IMPORTE</th>
+	</tr>
+	<tr>
+		<td class="Borde-T center" width="13%">%C% %CONCEPTO_CANTIDAD%</td>
+		<td class="Borde-T center" width="13%">%CONCEPTO_UNIDAD%</td>
+		<td width="44%" colspan="4">%CONCEPTO_DESC%</td>
+		<td class="derecha" width="15%">%CONCEPTO_VALORUNITARIO%</td>
+		<td class="derecha" width="15%">%CONCEPTO_TOTAL% %/C%</td>
+	</tr>
+	<tr>
+		<th width="70%" class="Title" colspan="6">IMPORTE TOTAL CON LETRA</th>
+		<td width="15%" class="SinBorde derecha"><strong>SUBTOTAL $</strong></td>
+		<td class="SinBorde derecha" width="15%">%SUBTOTAL%</td>
+	</tr>
+	<tr>
+		<td width="70%" height="64px" colspan="6" rowspan="4">%\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</td>
+		<td width="15%" class="SinBorde derecha"><strong>- DESCUENTO $</strong></td>
+		<td class="SinBorde derecha" width="15%">%DESCUENTOS%</td>
+	</tr>
+	<tr>
+		<td width="15%" class="SinBorde derecha"><strong>+ 16 IVA $</strong></td>
+		<td class="SinBorde derecha" width="15%">%IVA%</td>
+	</tr>
+	<tr>
+		<td width="15%" class="SinBorde derecha"><strong>- 4% RET. IVA $</strong></td>
+		<td class="SinBorde derecha" width="15%">%RIVA%</td>
+	</tr>
+	<tr>
+		<td width="15%" class="SinBorde derecha"><strong>TOTAL $</strong></td>
+		<td class="SinBorde derecha" width="15%">%TOTAL%
+</td>
+	</tr>
+	<tr>
+		<th class="Title" colspan="8">OBSERVACIONES</th>
+	</tr>
+	<tr>
+		<td class="SinBorde" colspan="8"> %V/Compac/Encabezado/MGW10008|cSerieDo01/%</td>
+	</tr>
+</table>
+
+<br>
+
+<table border="1" style="width:100%">
+
+	<tr>
+		<th class="Title" colspan="8">PAGARE</th>
+	</tr>
+	<tr>
+		<td class="SinBorde" colspan="8">DEBO Y PAGARE INCONDICIONALMENTE A <strong>%EMISOR_NOMBRE%</strong> EN ESTA CIUDAD DE <strong>%EMISOR_MUNICIPIO%, %EMISOR_ESTADO%</strong> EL DIA <strong>%INVOICE_SDATE%</strong> LA CANTIDAD DE <strong>$ %TOTAL% %\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</strong> VALOR DE LA MERCANCIA ARRIBA DESCRITA QUE HE RECIBIDO A MI ENTERA SATISFACCION. ESTE PAGARE ES MERCANTIL Y ESTA REGIDO POR LA LEY GENERAL DE TITULOS Y OPERACIONES DE CREDITO EN SU ART. 173 PARTE FINAL Y ARTICULOS CORRELATIVOS POR NO SER PAGARE DOMICILIADO Y DE NO PAGARSE A SU VENCIMIENTO CAUSARA UN INTERES MORATORIO A RAZON DEL 5% MENSUAL. <strong> %EMISOR_MUNICIPIO%, %EMISOR_ESTADO% A %INVOICE_SDATE%. </strong></td>
+	</tr>
+	<tr>
+		<td class="SinBorde" colspan="8"></td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="70%" colspan="6"></td>
+		<td width="30%" class="center" colspan="2">___________________________________</td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="70%" colspan="6"></td>
+		<td width="30%" class="center" colspan="2">FIRMA DE CONFORMIDAD</td>
+	</tr>
+</table>
+
+<br>
+
+<table style="width:100%">
+
+	<tr>
+		<td colspan="2" width="5%"></td>
+		<td colspan="2" width="30%"><strong>FOLIO FISCAL:</strong></td>
+		<td colspan="2" width="35%"><strong>NUMERO DE SERIE DEL CERTIFICADO DEL SAT:</strong></td>
+		<td colspan="2" width="30%"><strong>FECHA Y HORA DE CERTIFICACION</strong></td>
+	</tr>
+	<tr>
+		<td width="5%" colspan="2"></td>
+		<td class="Borde-T" width="30%" colspan="2">%TFD_FOLIO%</td>
+		<td class="Borde-T" width="35%" colspan="2">%TFD_SERIE_CERT%</td>
+		<td class="Borde-T" width="30%" colspan="2">%TFD_FECHA%</td>
+	</tr>
+	<tr>
+		<td width="5%" colspan="2"></td>
+		<td width="15%" colspan="3"><strong>SELLO DIGITAL DEL CDFI:</strong></td>
+		<td class="derecha" width="80%" colspan="3"><strong>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESSA DE UN CDFI</strong></td>
+	</tr>
+	<tr>
+		<td width="5%" colspan="2"></td>
+		<td class="Borde-T" width="95%" colspan="6">%SELLO_DIG_2R%</td>
+	</tr>
+	<tr>
+		<td width="10%" colspan="2"></td>
+		<td width="90" colspan="6"><strong>SELLO DEL SAT:</strong></td>
+	</tr>
+	<tr>
+		<td width="10%" colspan="2"></td>
+		<td class="Borde-T" width="90" colspan="6">%TFD_SELLO_2R%</td>
+	</tr>
+	<tr>
+		<td width="100%" colspan="8"><strong>CADENA ORIGINAL DEL COMPLEMENTO DE CERTIFICACION DIGITAL SAT:</strong></td>
+	</tr>
+	<tr>
+		<td class="Borde-T" width="100%" colspan="8">%TFD_CADENA_ORIG_80%</td>
+	</tr>
+</table>
+</body>
+</html>
