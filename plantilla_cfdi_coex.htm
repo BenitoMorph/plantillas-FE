@@ -149,29 +149,41 @@
 		<td class="derecha" width="15%">%CONCEPTO_VALORUNITARIO%</td>
 		<td class="derecha" width="15%">%CONCEPTO_TOTAL% %/C%</td>
 	</tr>
+</table>
+<table border="1" width="100%" style="floar:left;">
 	<tr>
-		<th width="70%" class="Title" colspan="6">IMPORTE TOTAL CON LETRA</th>
-		<td width="15%" class="SinBorde derecha"><strong>SUBTOTAL $</strong></td>
-		<td class="SinBorde derecha" width="15%">%SUBTOTAL%</td>
+		<th width="70%" class="Title">IMPORTE TOTAL CON LETRA</th>
 	</tr>
 	<tr>
-		<td width="70%" height="64px" colspan="6" rowspan="4">%\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</td>
+		<td width="70%">%\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>- DESCUENTO $</strong></td>
 		<td class="SinBorde derecha" width="15%">%DESCUENTOS%</td>
 	</tr>
 	<tr>
+		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
+		<td width="15%" class="SinBorde derecha"><strong>SUBTOTAL $</strong></td>
+		<td class="SinBorde derecha" width="15%">%SUBTOTAL%</td>
+	</tr>
+	<tr>
+		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>+ 16 IVA $</strong></td>
 		<td class="SinBorde derecha" width="15%">%IVA%</td>
 	</tr>
 	<tr>
+		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>- 4% RET. IVA $</strong></td>
 		<td class="SinBorde derecha" width="15%">%RIVA%</td>
 	</tr>
 	<tr>
+		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>TOTAL $</strong></td>
-		<td class="SinBorde derecha" width="15%">%TOTAL%
-</td>
+		<td class="SinBorde derecha" width="15%">%TOTAL%</td>
 	</tr>
+</table>
+<table border="1" width="100%">
 	<tr>
 		<th class="Title" colspan="8">OBSERVACIONES</th>
 	</tr>
@@ -205,36 +217,30 @@
 
 <br>
 
-<table style="width:100%">
+<table width="100%">
 
 	<tr>
-		<td colspan="2" width="5%"></td>
 		<td colspan="2" width="30%"><strong>FOLIO FISCAL:</strong></td>
-		<td colspan="2" width="35%"><strong>NUMERO DE SERIE DEL CERTIFICADO DEL SAT:</strong></td>
-		<td colspan="2" width="30%"><strong>FECHA Y HORA DE CERTIFICACION</strong></td>
+		<td colspan="3" width="35%"><strong>NUMERO DE SERIE DEL CERTIFICADO DEL SAT:</strong></td>
+		<td colspan="3" width="35%"><strong>FECHA Y HORA DE CERTIFICACION</strong></td>
 	</tr>
 	<tr>
-		<td width="5%" colspan="2"></td>
 		<td class="Borde-T" width="30%" colspan="2">%TFD_FOLIO%</td>
-		<td class="Borde-T" width="35%" colspan="2">%TFD_SERIE_CERT%</td>
-		<td class="Borde-T" width="30%" colspan="2">%TFD_FECHA%</td>
+		<td class="Borde-T" width="35%" colspan="3">%TFD_SERIE_CERT%</td>
+		<td class="Borde-T" width="33%" colspan="3">%TFD_FECHA%</td>
 	</tr>
 	<tr>
-		<td width="5%" colspan="2"></td>
-		<td width="15%" colspan="3"><strong>SELLO DIGITAL DEL CDFI:</strong></td>
-		<td class="derecha" width="80%" colspan="3"><strong>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESSA DE UN CDFI</strong></td>
+		<td width="20%" colspan="2"><strong>SELLO DIGITAL DEL CDFI:</strong></td>
+		<td class="derecha" width="80%" colspan="6"><strong>ESTE DOCUMENTO ES UNA REPRESENTACION IMPRESSA DE UN CDFI</strong></td>
 	</tr>
 	<tr>
-		<td width="5%" colspan="2"></td>
-		<td class="Borde-T" width="95%" colspan="6">%SELLO_DIG_2R%</td>
+		<td class="Borde-T" width="100%" colspan="8">%SELLO_DIG_2R%</td>
 	</tr>
 	<tr>
-		<td width="10%" colspan="2"></td>
-		<td width="90" colspan="6"><strong>SELLO DEL SAT:</strong></td>
+		<td width="100" colspan="8"><strong>SELLO DEL SAT:</strong></td>
 	</tr>
 	<tr>
-		<td width="10%" colspan="2"></td>
-		<td class="Borde-T" width="90" colspan="6">%TFD_SELLO_2R%</td>
+		<td class="Borde-T" width="100" colspan="8">%TFD_SELLO_2R%</td>
 	</tr>
 	<tr>
 		<td width="100%" colspan="8"><strong>CADENA ORIGINAL DEL COMPLEMENTO DE CERTIFICACION DIGITAL SAT:</strong></td>
