@@ -134,7 +134,6 @@
 <br>
 
 <table border="1" style="width:100%">
-
 	<tr>
 		<th width="13%" class="Title">CANTIDAD</th>
 		<th width="13%" class="Title">UNIDAD</th>
@@ -142,7 +141,7 @@
 		<th width="15%" class="Title">P.UNITARIO</th>
 		<th width="15%" class="Title">IMPORTE</th>
 	</tr>
-	<tr>
+	<tr style="height: 25px;">
 		<td class="Borde-T center" width="13%">%C% %CONCEPTO_CANTIDAD%</td>
 		<td class="Borde-T center" width="13%">%CONCEPTO_UNIDAD%</td>
 		<td width="44%" colspan="4">%CONCEPTO_DESC%</td>
@@ -150,39 +149,39 @@
 		<td class="derecha" width="15%">%CONCEPTO_TOTAL% %/C%</td>
 	</tr>
 </table>
-<table border="1" width="100%" style="floar:left;">
+
+<table border="1" width="30%" style="float: right;">
 	<tr>
-		<th width="70%" class="Title">IMPORTE TOTAL CON LETRA</th>
-	</tr>
-	<tr>
-		<td width="70%">%\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</td>
-	</tr>
-	<tr>
-		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>- DESCUENTO $</strong></td>
 		<td class="SinBorde derecha" width="15%">%DESCUENTOS%</td>
 	</tr>
 	<tr>
-		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>SUBTOTAL $</strong></td>
 		<td class="SinBorde derecha" width="15%">%SUBTOTAL%</td>
 	</tr>
 	<tr>
-		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>+ 16 IVA $</strong></td>
 		<td class="SinBorde derecha" width="15%">%IVA%</td>
 	</tr>
 	<tr>
-		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>- 4% RET. IVA $</strong></td>
 		<td class="SinBorde derecha" width="15%">%RIVA%</td>
 	</tr>
 	<tr>
-		<td class="SinBorde" width="70%" height="64px" colspan="6"></td>
 		<td width="15%" class="SinBorde derecha"><strong>TOTAL $</strong></td>
 		<td class="SinBorde derecha" width="15%">%TOTAL%</td>
 	</tr>
 </table>
+
+<table border="1" width="70%">
+	<tr>
+		<th width="100%" class="Title" style="float: left;">IMPORTE TOTAL CON LETRA</th>
+	</tr>
+	<tr>
+		<td width="100%" style="height: 62px;">%\//Compac/Encabezado/MGW10008/Funciones|f_TOTALLETRA\%</td>
+	</tr>
+</table>
+
 <table border="1" width="100%">
 	<tr>
 		<th class="Title" colspan="8">OBSERVACIONES</th>
@@ -212,7 +211,7 @@
 	<tr>
 		<td class="SinBorde" width="70%" colspan="6"></td>
 		<td width="30%" class="center" colspan="2">FIRMA DE CONFORMIDAD</td>
-	</tr>
+	</tr>	
 </table>
 
 <br>
